@@ -110,3 +110,7 @@ input {
 #color {
   cursor: pointer;
 }
+
+.footer {
+  text-align: center;
+}

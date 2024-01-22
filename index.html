@@ -14,24 +14,10 @@
         <h3 class="grid-size-title">Grid Size</h3>
         <div class="grid-size-controls">
           <label for="width">width</label>
-          <input
-            type="range"
-            name="width"
-            id="width"
-            min="1"
-            max="100"
-            value="20"
-          />
+          <input type="range" name="width" id="width" min="1" max="100" />
           <span id="width-value">00</span>
           <label for="height">height</label>
-          <input
-            type="range"
-            name="height"
-            id="height"
-            min="1"
-            max="100"
-            value="20"
-          />
+          <input type="range" name="height" id="height" min="1" max="100" />
           <span id="height-value">00</span>
           <button class="btn generate">Generate</button>
           <button class="btn clear">Clear</button>
@@ -42,6 +28,11 @@
       </div>
     </div>
     <table class="board"></table>
+
+    <div class="footer">
+      <p>100 Days <span class="heart">&hearts;</span>#1</p>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>

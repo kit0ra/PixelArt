@@ -1,7 +1,14 @@
 const board = document.querySelector('.board')
 
+const eraseButton = document.querySelector('.erase')
+const paintButton = document.querySelector('.paint')
 const generateButton = document.querySelector('.generate')
 const clearButton = document.querySelector('.clear')
+let lastColor = '#fbfef9'
+const color = document.querySelector('#color')
+
+console.log(eraseButton)
+console.log(paintButton)
 
 const heightSlider = document.querySelector('#height')
 const heightValue = document.querySelector('#height-value')
@@ -19,7 +26,6 @@ heightSlider.addEventListener('input', updateHeightValue)
 
 function updateWdithValue() {
   const widthSliderValue = document.querySelector('#width').value
-  console.log(widthSliderValue)
   widthValue.innerHTML = widthSliderValue
 }
 
@@ -28,7 +34,6 @@ widthSlider.addEventListener('input', updateWdithValue)
 function ShowWidthValue() {
   const widthValue = document.querySelector('#width-value')
   const width = document.querySelector('#width').value
-  console.log(width)
   widthValue.innerHTML = width
 }
 
@@ -69,7 +74,14 @@ board.addEventListener('click', function (e) {
   }
 })
 
-const eraseButton = document.querySelector('.erase')
+paintButton.addEventListener('click', function () {
+  color.value = lastColor
+})
+
 eraseButton.addEventListener('click', function () {
+  lastColor = color.value
   color.value = '#fbfef9'
 })
+
+updateHeightValue()
+updateWdithValue()
