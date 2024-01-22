@@ -4,17 +4,26 @@ const generateButton = document.querySelector('.generate')
 const clearButton = document.querySelector('.clear')
 
 const heightSlider = document.querySelector('#height')
-const wdithSlider = document.querySelector('#width')
+const heightValue = document.querySelector('#height-value')
 
-heightSlider.addEventListener('input', () => ShowHeightValue)
-wdithSlider.addEventListener('input', () => ShowWidthValue)
+const widthSlider = document.querySelector('#width')
+const widthValue = document.querySelector('#width-value')
 
-function ShowHeightValue() {
-  const heightValue = document.querySelector('#height-value')
-  const height = document.querySelector('#height').value
-  console.log(height)
-  heightValue.innerHTML = height
+function updateHeightValue() {
+  const heightSliderValue = document.querySelector('#height').value
+  console.log(heightSliderValue)
+  heightValue.innerHTML = heightSliderValue
 }
+
+heightSlider.addEventListener('input', updateHeightValue)
+
+function updateWdithValue() {
+  const widthSliderValue = document.querySelector('#width').value
+  console.log(widthSliderValue)
+  widthValue.innerHTML = widthSliderValue
+}
+
+widthSlider.addEventListener('input', updateWdithValue)
 
 function ShowWidthValue() {
   const widthValue = document.querySelector('#width-value')
