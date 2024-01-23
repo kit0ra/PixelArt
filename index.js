@@ -16,6 +16,8 @@ const heightValue = document.querySelector('#height-value')
 const widthSlider = document.querySelector('#width')
 const widthValue = document.querySelector('#width-value')
 
+let mouseDown = false
+
 function updateHeightValue() {
   const heightSliderValue = document.querySelector('#height').value
   console.log(heightSliderValue)
@@ -70,6 +72,23 @@ clearButton.addEventListener('click', clearTable)
 board.addEventListener('click', function (e) {
   const el = e.target
   if (el.classList.contains('cell')) {
+    el.style.backgroundColor = color.value
+  }
+})
+
+board.addEventListener('mousedown', function (e) {
+  mouseDown = true
+  console.log(mouseDown)
+})
+
+board.addEventListener('mouseup', function (e) {
+  mouseDown = false
+  console.log(mouseDown)
+})
+
+board.addEventListener('mousemove', function (e) {
+  const el = e.target
+  if (el.classList.contains('cell') && mouseDown) {
     el.style.backgroundColor = color.value
   }
 })
