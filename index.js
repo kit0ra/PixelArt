@@ -4,11 +4,9 @@ const eraseButton = document.querySelector('.erase')
 const paintButton = document.querySelector('.paint')
 const generateButton = document.querySelector('.generate')
 const clearButton = document.querySelector('.clear')
+
 let lastColor = '#fbfef9'
 const color = document.querySelector('#color')
-
-console.log(eraseButton)
-console.log(paintButton)
 
 const heightSlider = document.querySelector('#height')
 const heightValue = document.querySelector('#height-value')
@@ -20,7 +18,6 @@ let mouseDown = false
 
 function updateHeightValue() {
   const heightSliderValue = document.querySelector('#height').value
-  console.log(heightSliderValue)
   heightValue.innerHTML = heightSliderValue
 }
 
@@ -78,12 +75,10 @@ board.addEventListener('click', function (e) {
 
 board.addEventListener('mousedown', function (e) {
   mouseDown = true
-  console.log(mouseDown)
 })
 
 board.addEventListener('mouseup', function (e) {
   mouseDown = false
-  console.log(mouseDown)
 })
 
 board.addEventListener('mousemove', function (e) {
