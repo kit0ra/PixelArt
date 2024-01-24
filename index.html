@@ -7,32 +7,36 @@
     <title>100 Days Challenge - DAY 1</title>
   </head>
   <body>
-    <h1 class="title">#1 - Pixel Art Generator</h1>
-    <img class="pixel-art" src="source/pen.jpg" alt="pixel art pen" />
-    <div class="container">
-      <div class="grid-size">
-        <h3 class="grid-size-title">Grid Size</h3>
-        <div class="grid-size-controls">
-          <label for="width">width</label>
-          <input type="range" name="width" id="width" min="1" max="100" />
-          <span id="width-value">00</span>
-          <label for="height">height</label>
-          <input type="range" name="height" id="height" min="1" max="100" />
-          <span id="height-value">00</span>
-          <button class="btn generate">Generate</button>
-          <button class="btn clear">Clear</button>
-          <input type="color" name="color" id="color" />
-          <button class="btn erase">Erase</button>
-          <button class="btn paint">Paint</button>
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="title">#1 - Pixel Art Generator</h1>
+        <img class="pixel-art" src="source/pen.jpg" alt="pixel art pen" />
+      </div>
+      <div class="content">
+        <div class="container">
+          <div class="grid-size">
+            <h3 class="grid-size-title">Grid Size</h3>
+            <div class="grid-size-controls">
+              <label for="width">width</label>
+              <input type="range" name="width" id="width" min="1" max="100" />
+              <span id="width-value">00</span>
+              <label for="height">height</label>
+              <input type="range" name="height" id="height" min="1" max="100" />
+              <span id="height-value">00</span>
+              <button class="btn generate">Generate</button>
+              <button class="btn clear">Clear</button>
+              <input type="color" name="color" id="color" />
+              <button class="btn erase">Erase</button>
+              <button class="btn paint">Paint</button>
+            </div>
+          </div>
         </div>
+        <table class="board"></table>
+      </div>
+      <div class="footer">
+        <p>100 Days <span class="heart">&hearts;</span>#1 - Salah</p>
       </div>
     </div>
-    <table class="board"></table>
-
-    <div class="footer">
-      <p>100 Days <span class="heart">&hearts;</span>#1 - Salah</p>
-    </div>
-
     <script src="index.js"></script>
   </body>
 </html>
